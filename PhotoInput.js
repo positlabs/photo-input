@@ -71,6 +71,10 @@ PhotoInput = function(options){
 	}
 
 	function init(){
+
+		// stop previous stream just in case
+		if(stream) stream.getVideoTracks()[0].stop()
+
 		var constraints = {
 			audio: false,
 			video: {
