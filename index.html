@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="./PhotoInput.js"></script>
+		<link rel="stylesheet" href="./photo-input.css">
+	</head>
+	<body>
+
+		<div id="photo-input-container"></div>
+
+		<script>
+			var photoInput = new PhotoInput({
+				parent: document.getElementById('photo-input-container'),
+				postURL: 'http://httpbin.org/post',
+				onPostComplete: function(response){
+					console.log('done!', response)
+				}
+			})
+			console.log(photoInput)
+		</script>
+
+	</body>
+</html>

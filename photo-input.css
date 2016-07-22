@@ -1,0 +1,33 @@
+.photo-input {
+	position: relative;
+	
+}
+
+.photo-input video {
+
+}
+
+.photo-input canvas {
+	position: absolute;
+	left: 0; top: 0;
+}
+
+.photo-input select {
+	position: absolute;
+	z-index: 1;
+}
+
+
+
+.photo-input[state='capture'] canvas,
+.photo-input[state='capture'] button.accept,
+.photo-input[state='capture'] button.discard
+{
+	display: none;	
+}
+
+.photo-input[state='review'] button.snap,
+.photo-input[state='review'] select
+{
+	display: none;
+}
